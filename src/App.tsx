@@ -121,10 +121,10 @@ const [isAnimating, setIsAnimating] = useState(false)
 
       </div>
      
-     {/* <audio loop ref={audioRef}>
+     <audio loop ref={audioRef}>
         <source src={music} type="audio/mpeg" />
         Your browser does not support the audio element.
-      </audio> */}
+      </audio>
 
       <div id="hanging-light" className="hanging-light">
         <div className="light-bulb-container light-bulb-container-animation1">
