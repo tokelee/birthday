@@ -3,7 +3,6 @@ import "./App.css";
 import music from "./assets/happy-birthday2.mp3";
 import hbd from "./assets/hbd.png";
 import ballon2 from "./assets/ballon3.png";
-import ballon from "./assets/ballon2.png";
 import ballon4 from "./assets/balloon.png";
 import ballon3 from "./assets/ballon4.png";
 
@@ -11,10 +10,8 @@ import ballon3 from "./assets/ballon4.png";
 
 function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [_, setIsPlaying] = useState(false);
   const [count, setCount] = useState(0);
-  // const screenWidth = window.innerWidth;
-  // const numberOfBulbs = Math.floor(screenWidth/65);
 
   function lightOn(lightNumber:string, color:string){
     let element = document.getElementById(lightNumber);
@@ -55,7 +52,7 @@ function App() {
     }, 9000)
     setCount((count) => count + 1);
   }
-const [currentMessageNum, setCurrentMessageNum] = useState(1)
+
 
 const texts : string[] = [
   "Happy Birthday, Adeolu! 🎂",
