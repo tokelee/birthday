@@ -1,0 +1,409 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #242424;
+  overflow-x: hidden;
+  font-family: "Emilys Candy", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fade-off {
+  transition: 9s;
+  opacity: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.light-on {
+  background-color: #ffcb64 !important;
+}
+
+.background {
+  background-color: #242424;
+  height: 100vh;
+  width: 100vw;
+  transition: 25s;
+  max-width: 400px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.message button{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #646cff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background-color: #ffcb64;
+}
+
+button:hover {
+  /* border-color: #646cff; */
+  border-color: #ffcb64;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.hanging-light {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: -300px;
+  transition: 10s;
+}
+
+.light-bulb-container {
+  height: 100%;
+  width: 65px;
+  position: relative;
+}
+
+.light-bulb-container-animation1 {
+  animation: animate 8s alternate infinite;
+}
+
+.light-bulb-container-animation2 {
+  animation: animate1 5s alternate infinite;
+}
+
+.light-bulb-container-animation3 {
+  animation: animate2 3s alternate infinite;
+}
+
+#light1 {
+  position: absolute;
+  top: 70px;
+  left: 13px;
+  width: 40px;
+  height: 40px;
+  background-color: #46f23d;
+  border-radius: 50%;
+  border: 0.9px solid #3ae231;
+}
+
+#light1::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  width: 2px;
+  height: 100px;
+}
+
+#light2 {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #0df7ff;
+  border-radius: 50%;
+  border: 0.9px solid #0dd8df;
+}
+
+#light2::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: -150px;
+  left: 20px;
+  width: 2px;
+  height: 150px;
+}
+
+#light3 {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  border: 0.9px solid #d30505;
+}
+
+#light3::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  width: 2px;
+  height: 100px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(10deg)
+  }
+
+  100% {
+    transform: rotate(-10deg)
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+    transform: rotate(-5deg)
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(8deg)
+  }
+
+  100% {
+    transform: rotate(-8deg)
+  }
+}
+
+#ballon-container{
+  position: relative;
+}
+
+#light-button {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#ballon img {
+  height: 100%;
+}
+
+#ballon {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
+.ballon1{
+  animation: ballon1 30s alternate infinite;
+}
+
+.ballon2{
+  animation: ballon2 40s alternate infinite;
+}
+.ballon3{
+  animation: ballon3 35s alternate infinite;
+}
+.ballon4{
+  animation: ballon4 35s alternate infinite;
+}
+
+@keyframes ballon1 {
+  0% {
+    margin-top: 10vh;
+    margin-left: 70vw;
+    transform: rotate(-10deg);
+  }
+
+  15% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(-10deg);
+  }
+
+
+  50% {
+    margin-top: 40vh;
+    margin-left: 0;
+    transform: rotate(10deg);
+  }
+
+  65% {
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    margin-top: 80vh;
+    margin-left: 70vw;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes ballon2 {
+  100% {
+    margin-top: 50vh;
+    margin-left: 75vw;
+    transform: rotate(-10deg);
+  }
+
+  85% {
+    transform: rotate(10deg);
+  }
+
+  65% {
+    transform: rotate(-10deg);
+  }
+
+
+  50% {
+    margin-top: 60vh;
+    margin-left: 0;
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(10deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+
+  0% {
+    margin-top: 70vh;
+    margin-left: 75vw;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes ballon3 {
+  0% {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    transform: rotate(-10deg);
+  }
+
+  15% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(-10deg);
+  }
+
+
+  40% {
+    margin-top: 40vh;
+    margin-left: 70vw;
+    transform: rotate(10deg);
+  }
+
+  65% {
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    margin-top: 80vh;
+    margin-left: 5vw;
+    transform: rotate(10deg);
+  }
+}
+@keyframes ballon4 {
+  0% {
+    margin-top: 10vh;
+    margin-left: 70vw;
+    transform: rotate(-10deg);
+  }
+
+  15% {
+    transform: rotate(10deg);
+  }
+
+  35% {
+    transform: rotate(-10deg);
+  }
+
+
+  50% {
+    margin-top: 40vh;
+    margin-left: 30vw;
+    transform: rotate(10deg);
+  }
+
+  65% {
+    transform: rotate(10deg);
+  }
+
+  85% {
+    transform: rotate(-10deg);
+  }
+
+  0% {
+    margin-top: 80vh;
+    margin-left: 70vw;
+    transform: rotate(10deg);
+  }
+}
+
+/* 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
